@@ -93,7 +93,7 @@ def process(args, yuv_list):
             width = args.width
             height = args.height
         else:
-            file_wh = file.split("_")[-1].split(".")[0].split("x")
+            file_wh = file.split("_")[-1].split(".")[0].split()[0].split("x")
             if len(file_wh) != 2:
                 print("[%d/%d] Fail: %s" % (count, len(yuv_list), image_path))
                 print(f"Error: Could not get image width and height from filename!")
